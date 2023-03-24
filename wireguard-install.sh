@@ -207,7 +207,7 @@ function installWireGuard() {
 	elif [[ ${OS} == 'arch' ]]; then
 		pacman -S --needed --noconfirm wireguard-tools qrencode
 	elif [[ ${OS} == 'suse' ]]; then
-		zypper -n install wireguard-tools qrencode
+		zypper -n install wireguard-tools qrencode iptables
 	fi
 
 	# Make sure the directory exists (this does not seem the be the case on fedora)
@@ -463,7 +463,7 @@ function uninstallWg() {
 		elif [[ ${OS} == 'arch' ]]; then
 			pacman -Rs --noconfirm wireguard-tools qrencode
 		elif [[ ${OS} == 'suse' ]]; then
-			zypper -n remove wireguard-tools qrencode
+			zypper -n remove wireguard-tools qrencode iptables
 		fi
 
 		rm -rf /etc/wireguard
