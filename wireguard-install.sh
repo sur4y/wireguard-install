@@ -462,6 +462,8 @@ function uninstallWg() {
 			yum remove --noautoremove wireguard-tools qrencode
 		elif [[ ${OS} == 'arch' ]]; then
 			pacman -Rs --noconfirm wireguard-tools qrencode
+		elif [[ ${OS} == 'suse' ]]; then
+			zypper remove -n wireguard-tools qrencode
 		fi
 
 		rm -rf /etc/wireguard
