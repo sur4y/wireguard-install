@@ -206,7 +206,7 @@ function installWireGuard() {
 		dnf install -y wireguard-tools qrencode iptables
 	elif [[ ${OS} == 'arch' ]]; then
 		pacman -S --needed --noconfirm wireguard-tools qrencode
-	elif [[ ${OS} == 'arch ']] then
+	elif [[ ${OS} == 'suse']] then
 		zypper install --non-interactive wireguard-tools qrencode
 	fi
 
