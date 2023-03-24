@@ -1,5 +1,7 @@
 # WireGuard installer
 
+## WARNING: if you decide to uninstall wireguard through this script, make sure that you aren't uninstalling the kernel-devel package if you need it
+
 ![Lint](https://github.com/angristan/wireguard-install/workflows/Lint/badge.svg)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/angristan)
 
