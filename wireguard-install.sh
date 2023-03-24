@@ -207,7 +207,7 @@ function installWireGuard() {
 	elif [[ ${OS} == 'arch' ]]; then
 		pacman -S --needed --noconfirm wireguard-tools qrencode
 	elif [[ ${OS} == 'suse' ]]; then
-		zypper install --non-interactive wireguard-tools qrencode
+		zypper install -n wireguard-tools qrencode
 	fi
 
 	# Make sure the directory exists (this does not seem the be the case on fedora)
